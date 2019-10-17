@@ -1,0 +1,59 @@
+@import "mixin";
+@import "variable";
+
+
+
+.__screen__{
+  height:100%;
+  overflow-y:hidden;
+  transform:scale(1);
+  &.iphoneX-screen{
+    height:calc( 100% - #{rpx($iphoneX-tab)} );
+  }
+}
+
+
+
+.z-center{
+  position: absolute;
+  top: 50%;
+  transform:translate(0,-50%)!important;
+}
+.h-center{
+  position: absolute;
+  left: 50%;
+  transform:translate(-50%,0)!important;
+}
+.zh-center{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform:translate(-50%,-50%)!important;
+}
+.no-wrap {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.iconfont{
+  font-size: 100%;
+}
+
+.cover {
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  background: $color-background-cover;
+}
+.button-reset{
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    &::after{
+      border: none;
+    }
+}

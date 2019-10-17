@@ -46,7 +46,13 @@ let baseWebpackConfig = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue': 'mpvue',
-      '@': resolve('src')
+      'flyio':'flyio/dist/npm/wx',
+      '@': resolve('src'),
+      'api': resolve('src/api'),
+      'assets': resolve('src/assets'),
+      'components':resolve('src/components'),
+      'styles': resolve('src/styles'),
+      'utils':resolve('src/utils')
     },
     symlinks: false,
     aliasFields: ['mpvue', 'weapp', 'browser'],
@@ -54,7 +60,7 @@ let baseWebpackConfig = {
   },
   module: {
     rules: [
-      {
+    /*  {
         test: /\.(js|vue)$/,
         loader: 'eslint-loader',
         enforce: 'pre',
@@ -62,7 +68,7 @@ let baseWebpackConfig = {
         options: {
           formatter: require('eslint-friendly-formatter')
         }
-      },
+      },*/
       {
         test: /\.vue$/,
         loader: 'mpvue-loader',

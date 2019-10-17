@@ -21,10 +21,13 @@
     "dev": "node build/dev-server.js wx",
     "start": "npm run dev",
     "build": "node build/build.js wx",
-    "lint": "eslint --ext .js,.vue src"
+    "lint": "eslint --ext .js,.vue src",
+    "lint:fix": "eslint --fix  --ext .js,.vue src"
   },
   "dependencies": {
+    "flyio": "0.6.2",
     "mpvue": "^2.0.0",
+    "mpvue-router-patch": "0.2.1",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
@@ -66,6 +69,7 @@
     "px2rpx-loader": "^0.1.10",
     "relative": "^3.0.2",
     "rimraf": "^2.6.0",
+    "sass-loader": "7.1.0",
     "semver": "^5.3.0",
     "shelljs": "^0.8.1",
     "uglifyjs-webpack-plugin": "^1.2.5",
@@ -75,6 +79,7 @@
     "mpvue-loader": "^2.0.0",
     "mpvue-template-compiler": "^2.0.0",
     "mpvue-webpack-target": "^1.0.3",
+    "node-sass": "4.9.4",
     "webpack-mpvue-vendor-plugin": "^2.0.0",
     "webpack-mpvue-asset-plugin": "^2.0.0",
     "webpack-bundle-analyzer": "^2.2.1",
