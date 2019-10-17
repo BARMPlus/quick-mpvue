@@ -10,7 +10,10 @@ var CopyWebpackPlugin = require('copy-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 var MpvueVendorPlugin = require('webpack-mpvue-vendor-plugin')
-var env = config.build.env
+var envConfig=process.env.config||'prod'
+var env =config.build[envConfig+'Env'];
+
+console.log(env)
 
 var webpackConfig = merge(baseWebpackConfig, {
   module: {
