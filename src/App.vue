@@ -7,7 +7,6 @@ export default {
   methods: {
     _getSystemInfo () {
       const res = wx.getSystemInfoSync()
-      console.log('benchmarkLevel', res)
       if (res.model.indexOf('iPhone X') !== -1) {
         this.setModel('iphoneX')
       }

@@ -130,6 +130,13 @@ let baseWebpackConfig = {
         to: path.resolve(config.build.assetsRoot, './static'),
         ignore: ['.*']
       }
+    ]),
+    new CopyWebpackPlugin([
+      {
+        from: path.resolve(__dirname, '../src/pages/sub-cs/images'),
+        to: path.resolve(config.build.assetsRoot, './pages/sub-cs/images'),
+        ignore: ['.*']
+      }
     ])
   ]
 }

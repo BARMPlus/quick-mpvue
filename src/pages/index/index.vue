@@ -1,6 +1,5 @@
 <template>
   <div class="index-container">
-    <image src="./images/circle-bg.png" class="bg" mode="aspectFill"/>
     <div @click="toRoute" v-if="!isLowVersion">toRoute</div>
     <div class="low-tip" v-else>
       <p class="text" v-if="isLowIosVersion">您的系统版本过低，可能无法正常使用此小程序的服务，请更新系统版本</p>
@@ -20,11 +19,11 @@ export default {
   mixins: [isLowVersionMixin], // isLowVersionMixin 需放置在最前面
   onLoad () {
     if (this.isLowVersion) return
-    console.log('1')
+    console.log('no isLowVersion')
   },
   methods: {
     toRoute () {
-      this.$router.push('/pages/cs/main')
+      this.$router.push('/pages/sub-cs/main')
     }
 
   }

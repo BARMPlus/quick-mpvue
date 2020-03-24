@@ -1,13 +1,27 @@
 {
   "pages": [
-    "pages/index/main",
-    "pages/cs/main"
+    "pages/index/main"
   ],
+  "subPackages": [
+    {
+      "root": "pages/sub-cs",
+      "name":"sub-cs",
+      "pages": [
+        "main"
+      ]
+    }
+  ],
+  "preloadRule":{
+    "pages/index/main":{
+      "network": "all",
+      "packages": ["sub-cs"]
+    }
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black",
-    "navigationStyle": "custom"
+    "navigationStyle": "default"
   }
 }
