@@ -27,6 +27,17 @@
     "lint": "eslint --ext .js,.vue src",
     "lint:fix": "eslint --fix  --ext .js,.vue src"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,vue}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
   "dependencies": {
     "flyio": "0.6.2",
     "mpvue": "^2.0.0",
@@ -64,11 +75,13 @@
     "glob": "^7.1.2",
     "html-webpack-plugin": "^3.2.0",
     "http-proxy-middleware": "^0.18.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.9",
     "mkdirp": "^0.5.1",
     "mpvue-loader": "^2.0.0",
     "mpvue-template-compiler": "^2.0.0",
     "mpvue-webpack-target": "^1.0.3",
-    "node-sass": "4.9.4",
+    "node-sass": "^4.13.1",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "ora": "^2.0.0",
     "portfinder": "^1.0.13",

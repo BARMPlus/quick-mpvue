@@ -1,5 +1,5 @@
 <template>
-  <div @click="clickHandle">cs</div>
+  <div>cs</div>
 </template>
 
 

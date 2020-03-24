@@ -60,7 +60,7 @@ let baseWebpackConfig = {
   },
   module: {
     rules: [
-    /*  {
+      {
         test: /\.(js|vue)$/,
         loader: 'eslint-loader',
         enforce: 'pre',
@@ -68,7 +68,7 @@ let baseWebpackConfig = {
         options: {
           formatter: require('eslint-friendly-formatter')
         }
-      },*/
+      },
       {
         test: /\.vue$/,
         loader: 'mpvue-loader',
