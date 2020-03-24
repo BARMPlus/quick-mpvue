@@ -1,8 +1,5 @@
-/**
- * Created by Administrator on 2018/4/9.
- */
 const getters = {
-
+  model: state => state.user.model,
+  isAnimate: state => state.user.isAnimate
 }
-
 export default getters

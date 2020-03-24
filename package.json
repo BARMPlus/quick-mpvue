@@ -7,6 +7,7 @@
   "private": true,
   "scripts": {
     "dev:wx": "node build/dev-server.js wx",
+    "dev:production":"cross-env config=prod node build/dev-server.js wx",
     "start:wx": "npm run dev:wx",
     "build:wx": "node build/build.js wx",
     "dev:swan": "node build/dev-server.js swan",

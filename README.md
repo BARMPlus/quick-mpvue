@@ -1,4 +1,4 @@
-# little-game
+# mpvue-quick
 
 > A Mpvue project
 

@@ -13,6 +13,7 @@ service.interceptors.request.use(config => { // request拦截器
   if (config.method === 'POST') config.body = qs.stringify(config.body)
   if (getToken()) config.headers[TokenKey] = getToken() // 让每个请求携带自定义token 请根据实际情况自行修改
   config.headers['X-Requested-With'] = 'XMLHttpRequest'
+  config.headers['X-Applet-Version'] = '1.0.0'
   return config
 }, error => {
   Promise.reject(error)

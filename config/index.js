@@ -55,7 +55,7 @@ module.exports = {
     fileExt: fileExt
   },
   dev: {
-    env: require('./dev.env'),
+    env: process.env.config==='prod'?require('./prod.env'):require('./dev.env'),
     port: 8080,
     // 在小程序开发者工具中不需要自动打开浏览器
     autoOpenBrowser: false,

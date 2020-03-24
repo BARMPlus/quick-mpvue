@@ -22,7 +22,7 @@
 	"miniprogramRoot": "dist/wx/",
 	"compileType": "miniprogram",
 	"appid": "touristappid",
-	"projectname": "little-game",
+	"projectname": "mpvue-quick",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"condition": {

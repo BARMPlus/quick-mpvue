@@ -4,7 +4,14 @@ class Storage {
     return wx.getStorageSync(key)
   }
   setItem (key, value) {
-    wx.setStorageSync(key, value)
+    try {
+      wx.setStorageSync(key, value)
+    } catch (e) {
+      wx.setStorage({
+        key,
+        data: value
+      })
+    }
   }
   removeItem (key) {
     wx.removeStorageSync(key)

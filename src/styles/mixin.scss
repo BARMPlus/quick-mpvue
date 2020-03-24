@@ -1,10 +1,8 @@
-
-
+@import "variable";
 
 @function rpx($value){
   @return $value * 1rpx;
 }
-
 
 @mixin bg-image($url){
   background-image: url($url + "@2x.png");
@@ -29,3 +27,9 @@
   }
 }
 
+@mixin iphoneX($attr,$val){
+  #{$attr}:rpx($val);
+  &.iphoneX{
+    #{$attr}:calc(#{rpx($val)} + #{rpx($iphoneX-tab)});
+  }
+}
