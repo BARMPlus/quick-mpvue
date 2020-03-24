@@ -1,12 +1,12 @@
 class Loading {
-  show(title='加载中...',mask=true){
+  show (title = '加载中...', mask = true) {
     wx.showLoading({
       title,
       mask
-    });
+    })
   }
-  hide(){
+  hide () {
     wx.hideLoading()
   }
 }
-export let loading=new Loading();
+export let loading = new Loading()

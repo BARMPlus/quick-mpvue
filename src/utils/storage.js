@@ -1,26 +1,23 @@
 
-
 class Storage {
-  getItem(key){
-    return wx.getStorageSync(key);
+  getItem (key) {
+    return wx.getStorageSync(key)
   }
-  setItem(key,value){
-    wx.setStorageSync(key,value)
+  setItem (key, value) {
+    wx.setStorageSync(key, value)
   }
-  removeItem(key){
+  removeItem (key) {
     wx.removeStorageSync(key)
   }
-  removeAll(){
+  removeAll () {
     wx.clearStorageSync()
   }
-  clearItem(){
+  clearItem () {
     wx.clearStorageSync()
   }
-  getInfo(){
-    return wx.getStorageInfoSync();
+  getInfo () {
+    return wx.getStorageInfoSync()
   }
 }
 
-
-
-export default new Storage();
+export default new Storage()

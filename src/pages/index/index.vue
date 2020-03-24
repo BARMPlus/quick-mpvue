@@ -6,17 +6,15 @@
 
 <script>
 
-import {getLineList} from 'api/login'
-
 export default {
   data () {
     return {
     }
   },
   methods: {
-    toRoute(){
+    toRoute () {
       this.$router.push('/pages/cs/main')
-    },
+    }
 
   }
 }
